@@ -1,16 +1,16 @@
 var myApp = {
   // we could put module-specific global variables here
-  mainMessage : "Welcome to the app!",
+  mainMessage : "A humble welcome to the app!",
 
   mainGreeting() {
-    console.log('hey! welcome to the app! this is awesome');
+    console.log('hello and welcome to the app!');
   }
 };
 
 myApp.module1 = {
   // this would be a feature-specific module, like all things video
   saySomething(message) {
-    console.log(myApp.mainMessage, message, `I'm the second file!`);
+    console.log(myApp.mainMessage, message, `I am the second file`);
   },
 
   doSomething() {
@@ -28,7 +28,7 @@ myApp.module2 = {
 (() => {
   myApp.mainGreeting();
 
-  myApp.module1.saySomething('sup, yo!');
+  myApp.module1.saySomething('hey!');
 
   function myFunc() {
     var theHeading = document.querySelector('h1');
